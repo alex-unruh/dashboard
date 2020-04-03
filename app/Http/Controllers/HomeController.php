@@ -56,7 +56,6 @@ class HomeController extends Controller
      */
     public function dashboard()
     {
-        $title = 'DASHBOARD';
-        return view('home', ['title' => $title]);
+        return view('dashboard');
     }
 }

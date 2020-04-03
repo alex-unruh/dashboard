@@ -104,8 +104,9 @@ class StatisticsController extends Controller
     /**
      * Get statistics of a specific data on a specific period
      *
-     * @param [type] $column
-     * @param [type] $date
+     * @param string $column Statistics table column 
+     * @param string $date [day, month or year]
+     * @param integer $limit 
      * @return Illuminate\Http\Response;
      */
     public function columnStats($column, $date = 'day', $limit = -1)

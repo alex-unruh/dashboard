@@ -25,7 +25,7 @@ $(function () {
      */
     function getVisits(date) {
         $.ajax({
-            url: '/admin/statistics/' + date,
+            url: 'stats-' + date,
             dataType: 'json',
             success: function (response) {
                 var labels = Object.keys(response);
@@ -209,11 +209,11 @@ $(function () {
     });
 
     getVisits('today');
-    getBrowserStats('today');
-    getPlatformStats('today');
-    getListStats('table_uri', 'today');
-    getListStats('table_referer', 'today');
-    getListStats('table_region', 'today');
-    getListStats('table_country', 'today');
+    // getBrowserStats('today');
+    // getPlatformStats('today');
+    // getListStats('table_uri', 'today');
+    // getListStats('table_referer', 'today');
+    // getListStats('table_region', 'today');
+    // getListStats('table_country', 'today');
 
 })
