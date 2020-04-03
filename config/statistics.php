@@ -15,6 +15,11 @@ return [
      * Defines the minimum number of days to be displayed in the visits graph per month
      */
     "min_days_to_display" => 15,
+    
+    /**
+     * Defines the minimum number of days to be displayed in the visits graph per month
+     */
+    "min_months_to_display" => 12,
 
     /**
      * Defines the labels for the months to be displayed in the visits category by year
