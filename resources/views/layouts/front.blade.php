@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    {{-- Menu --}}
     <div class="container-fluid">
         <div class="row">
             <div class="col xs-12">
@@ -35,6 +36,7 @@
 
         @yield('content')
     </div>
+    {{-- /Menu --}}
 
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

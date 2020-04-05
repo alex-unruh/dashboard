@@ -65,7 +65,7 @@ $(function () {
 
     // ############################## NAVEGADOR ###########################################
     // Pega o elemento e cria a instância do chart
-    var browserCtx = $("#browser_ctx");
+    var browserCtx = $("#browser");
     var browserChart = new Chart(browserCtx);
 
     /**
@@ -83,7 +83,7 @@ $(function () {
      */
     function getBrowserStats(date) {
         $.ajax({
-            url: '/admin/statistics/browser/' + date,
+            url: '/stats/browser/' + date,
             dataType: 'json',
             success: function (response) {
                 var labels = Object.keys(response);
@@ -122,7 +122,7 @@ $(function () {
 
     // ############################## PLATAFORMA ###########################################
     // Pega o elemento e cria a instância do chart
-    var platformCtx = $("#platform_ctx");
+    var platformCtx = $("#platform");
     var platformChart = new Chart(platformCtx);
 
     /**
@@ -140,7 +140,7 @@ $(function () {
      */
     function getPlatformStats(date) {
         $.ajax({
-            url: '/admin/statistics/platform/' + date,
+            url: '/stats/platform/' + date,
             dataType: 'json',
             success: function (response) {
                 var labels = Object.keys(response);
@@ -209,8 +209,8 @@ $(function () {
     });
 
     getVisits('today');
-    // getBrowserStats('today');
-    // getPlatformStats('today');
+    getBrowserStats('today');
+    getPlatformStats('today');
     // getListStats('table_uri', 'today');
     // getListStats('table_referer', 'today');
     // getListStats('table_region', 'today');
