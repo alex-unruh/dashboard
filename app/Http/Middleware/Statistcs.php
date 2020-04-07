@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use App\Statistic;
-use Illuminate\Support\Facades\Auth;
+use Propa\BrowscapPHP\Facades\Browscap;
 
 class Statistics
 {
@@ -29,7 +29,7 @@ class Statistics
     public function terminate($request, $response)
     {
         $geo = json_decode(file_get_contents("http://ip-api.com/json/{$request->ip}"));
-        $browser = get_browser();
+        $browser = Browscap::getBrowser();
         $stats = new Statistic();
         $stats->ip = $request->ip ?? $geo->query;
         $stats->lat = $geo->lat;

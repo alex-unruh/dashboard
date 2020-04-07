@@ -183,7 +183,7 @@ $(function () {
     function getListStats(table_id, date){
         var data = table_id.replace('table_', '');
         $.ajax({
-            url: '/admin/statistics/' + data + '/' + date,
+            url: '/stats/' + data + '/' + date,
             dataType: 'json',
             success: function (response) {
                 var html = '';
@@ -211,9 +211,9 @@ $(function () {
     getVisits('today');
     getBrowserStats('today');
     getPlatformStats('today');
-    // getListStats('table_uri', 'today');
-    // getListStats('table_referer', 'today');
-    // getListStats('table_region', 'today');
-    // getListStats('table_country', 'today');
+    getListStats('table_uri', 'today');
+    getListStats('table_referer', 'today');
+    getListStats('table_region', 'today');
+    getListStats('table_country', 'today');
 
 })
