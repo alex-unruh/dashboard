@@ -105,11 +105,11 @@ class StatisticsController extends Controller
      * Get statistics of a specific data on a specific period
      *
      * @param string $column Statistics table column 
-     * @param string $date [day, month or year]
+     * @param string $date [today, month or year]
      * @param integer $limit 
      * @return Illuminate\Http\Response;
      */
-    public function columnStats($column, $date = 'day', $limit = -1)
+    public function columnStats($column, $date = 'today', $limit = -1)
     {
         $response = [];
         $data = Statistic::select($column, DB::raw('COUNT(id) as visits'));

@@ -107,16 +107,125 @@
             {{-- Plataforma --}}
         </div>
     </div>
-</div>
 
+    {{-- Listas --}}
+    <div class="col-md-3">
+        {{-- URI --}}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="mt-2">Páginas</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="nav nav-pills justify-content-end" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link list active" data-toggle="pill" id="uri_today" href="#"
+                                            role="tab" aria-controls="pills-home" aria-selected="true">Hoje</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="uri_month" href="#" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Mês</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="uri_year" href="#" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">Ano</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-striped" id="table_uri"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- /URI --}}
+
+        {{-- Região --}}
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="mt-2">Regiões</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="nav nav-pills justify-content-end" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link list active" data-toggle="pill" id="region_today" href="#"
+                                            role="tab" aria-controls="pills-home" aria-selected="true">Hoje</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="region_month" href="#"
+                                            role="tab" aria-controls="pills-profile" aria-selected="false">Mês</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="region_year" href="#" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">Ano</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-striped" id="table_region"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- /Região --}}
+
+        {{-- País --}}
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="mt-2">Países</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="nav nav-pills justify-content-end" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link list active" data-toggle="pill" id="country_today" href="#"
+                                            role="tab" aria-controls="pills-home" aria-selected="true">Hoje</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="country_month" href="#"
+                                            role="tab" aria-controls="pills-profile" aria-selected="false">Mês</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link list" data-toggle="pill" id="country_year" href="#"
+                                            role="tab" aria-controls="pills-contact" aria-selected="false">Ano</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-striped" id="table_country"></table>
+                    </div>
+                    {{-- /País --}}
+                </div>
+            </div>
+        </div>
+        {{-- /País --}}
+    </div>
+    {{-- /Listas --}}
+</div>
 
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/Chart.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Chart.min.css') }}">
 @endpush
 
 @push('scripts')
-    <script src="{{ asset('js/Chart.min.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
+<script src="{{ asset('js/Chart.min.js') }}"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
 @endpush
